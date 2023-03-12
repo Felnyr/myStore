@@ -1,7 +1,10 @@
 package io.felnyrius.mystore.films;
 
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 
+@Component
 public class FilmServiceImpl implements FilmService{
 
     public FilmServiceImpl(FilmRepository filmRepo) {
