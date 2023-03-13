@@ -2,7 +2,6 @@ package io.felnyrius.mystore.films;
 
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 
 @Component
 public class FilmServiceImpl implements FilmService{
@@ -19,7 +18,12 @@ public class FilmServiceImpl implements FilmService{
     }
 
     @Override
-    public String getFilmDescription(Long id) {
+    public String getFilmDescription(int id) {
         return null;
+    }
+
+    @Override
+    public FilmDto addFilms(FilmDto filmDto) {
+        return filmRepo.save(filmDto);
     }
 }
